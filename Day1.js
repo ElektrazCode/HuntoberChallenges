@@ -19,7 +19,7 @@ As an example, here is how a string looks before and after the characters are fi
 Please create a function that will fix a given string of this mistake before incalculable damage can be done!
 */
 
-function unscramble(message){
+function unmixLetters(message){
     const mixLetters = ['O', 'I', 'Z', 'E', 'h', 'S', 'G', 'L', 'B', 'q'];
     const msg = message.split('');
     return msg.map( letter => {
@@ -32,4 +32,4 @@ function unscramble(message){
                 }).join('');
 }
 
-console.log(unscramble("PR0-T1P #hqB: 1T'5 N1C3 T0 5AY H3770."));
+console.log(unmixLetters("PR0-T1P #hqB: 1T'5 N1C3 T0 5AY H3770."));
