@@ -23,12 +23,12 @@ function listFilter(message){
         !pun.toLowerCase().includes('bark') &&
         !pun.toLowerCase().includes('dog') &&
         !pun.toLowerCase().includes('bone') &&
-        pun.length % 5 !== 0 &&
-        (pun.charCodeAt(0) + pun.charCodeAt(pun.length -1)) % 2 != 0 &&
-        pun[Math.floor(pun.length/2)] != 'e' &&
-        pun.match(/[a-z]/g).length % 2 !=0 &&
-        pun.match(/[A-Z]/g).length >=2 &&
-        !(/S/.test(pun))
+        (pun.length % 5 !== 0) &&
+        ((pun.charCodeAt(0) + pun.charCodeAt(pun.length -1)) % 2 != 0) &&
+        (pun[Math.ceil(pun.length/2)] != 'e') &&
+        (pun.match(/[a-z]/g).length % 2 == 0) &&
+        (pun.match(/[A-Z]/g).length >=2) &&
+        !pun.includes('S')
     )
 }
 
